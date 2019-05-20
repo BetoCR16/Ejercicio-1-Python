@@ -1,6 +1,6 @@
-respuesta = "sí"
+respuesta = "1"
 
-while (respuesta == "sí"):
+while (respuesta == "1"):
     nombre=input("Escriba su nombre: ")
     print("Hola "+nombre)
     edad = input("Digite su edad: ")
@@ -12,5 +12,6 @@ while (respuesta == "sí"):
     else:
         print("Eres menor")
         print("Se buen niño")
+    respuesta = input("¿Otra vez? ( 1:sí / 2:no ): ")
 
 print ("Adiós")
