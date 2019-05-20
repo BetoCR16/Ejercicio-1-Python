@@ -6,6 +6,8 @@ edadNumero=int(edad)
 if edadNumero >= 18 :
     print("¡Eres mayor de edad!")
     print("Puedes tomar legalmente :D")
-
+else:
+    print("Eres menor")
+    print("Se buen niño")
 
 print ("Adiós")
