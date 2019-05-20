@@ -15,5 +15,5 @@ cantidadesDeEdades = len(listaEdades)
 for edad in range(0, cantidadesDeEdades):
     suma = suma + listaEdades[edad]
 promedio = suma / len(listaEdades)
-print("El prmedio de edades es " + str(promedio))
-
+print("El promedio de edades es " + str(promedio))
+print("Muchas gracias"
