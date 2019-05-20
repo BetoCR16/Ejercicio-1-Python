@@ -1,11 +1,12 @@
 respuesta = "1"
-
+nombre=input("Escriba su nombre: ")
+listaEdades = []
+suma = 0
 while (respuesta == "1"):
-    nombre=input("Escriba su nombre: ")
     print("Hola "+nombre)
     edad = input("Digite su edad: ")
     edadNumero=int(edad)
-    #edadNumero=int(input("Digite su edad: ")
+    listaEdades.append(edadNumero)
     if edadNumero >= 18 :
         print("¡Eres mayor de edad!")
         print("Puedes tomar legalmente :D")
@@ -15,3 +16,9 @@ while (respuesta == "1"):
     respuesta = input("¿Otra vez? ( 1:sí / 2:no ): ")
 
 print ("Adiós")
+for edad in listaEdades:
+    suma = suma + edadNumero
+
+promedio = suma / len(listaEdades)
+print(promedio)
+#Promediar edades
