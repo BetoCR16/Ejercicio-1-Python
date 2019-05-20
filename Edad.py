@@ -1,10 +1,9 @@
 respuesta = "1"
 nombre=input("Escriba su nombre: ")
 listaEdades = []
-suma = 0
+print("Hola "+nombre)
 while (respuesta == "1"):
-    print("Hola "+nombre)
-    edad = input("Digite su edad: ")
+    edad = input("Digite una edad: ")
     edadNumero=int(edad)
     listaEdades.append(edadNumero)
     if edadNumero >= 18 :
@@ -16,9 +15,12 @@ while (respuesta == "1"):
     respuesta = input("¿Otra vez? ( 1:sí / 2:no ): ")
 
 print ("Adiós")
-for edad in listaEdades:
-    suma = suma + edadNumero
 
+#-------------------------------------- Promediar edades ------------------------------
+suma = 0
+cantidadesDeEdades = len(listaEdades)
+for edad in range(0, cantidadesDeEdades):
+    suma = suma + listaEdades[edad]
 promedio = suma / len(listaEdades)
-print(promedio)
-#Promediar edades
+print("El prmedio de edades es " + promedio)
+
