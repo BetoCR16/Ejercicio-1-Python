@@ -2,7 +2,7 @@ import time
 #------------------------------ Funciones --------------------------------------------
 def introducirOpción():
     time.sleep(1.5)
-    opción = input ('\nEscoja una opción:\n 1. Ingresar 2 números\n 2. Calcular sumatoria\n 3. Convertir de libras a kg\n 4. Convertir de kg a libras\n 5. Dividir los números\n 6. Salir\n \n Su opción: ')
+    opción = input ('Escoja una opción:\n 1. Ingresar 2 números\n 2. Calcular sumatoria\n 3. Convertir de kg a libras (se utiliza el primer número ingresado)\n 4. Calcular de libras a kilogramos (se utiliza el primer número ingresado)\n 5. Dividir los números\n 6. Salir\n \n Su opción: ')
     return opción
 
 def calcularSumatoria(num1, num2):
@@ -25,7 +25,7 @@ def dividirNumeros(num1, num2):
 
 #----------------------------------------- Programa Principal -------------------------------------------------------
 
-opción = input ('Escoja una opción:\n 1. Ingresar 2 números\n 2. Calcular sumatoria\n 3. Convertir de kg a libras\n 4. Calcular de libras a kilogramos\n 5. Dividir los números\n 6. Salir\n \n Su opción: ')
+opción = input ('Escoja una opción:\n 1. Ingresar 2 números\n 2. Calcular sumatoria\n 3. Convertir de kg a libras (se utiliza el primer número ingresado)\n 4. Calcular de libras a kilogramos (se utiliza el primer número ingresado)\n 5. Dividir los números\n 6. Salir\n \n Su opción: ')
 
 while (opción != '6'):
 #------------------------------------------ Introducir números ------------------------------------------    
