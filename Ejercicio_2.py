@@ -55,3 +55,4 @@ while (opción != '6'):
         opción = introducirOpción()
 
 print('\nMuchas gracias por usar este programa.\n¡Tenga un bonito día! :D')
+time.sleep(5)
