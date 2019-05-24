@@ -1,5 +1,7 @@
+import time
 #------------------------------ Funciones --------------------------------------------
 def introducirOpción():
+    time.sleep(1.5)
     opción = input ('\nEscoja una opción:\n 1. Ingresar 2 números\n 2. Calcular sumatoria\n 3. Convertir de libras a kg\n 4. Convertir de kg a libras\n 5. Dividir los números\n 6. Salir\n \n Su opción: ')
     return opción
 
@@ -52,4 +54,4 @@ while (opción != '6'):
             print('\nLa resultado de la división es: ' + str(dividirNumeros(num1, num2)))
         opción = introducirOpción()
 
-print('\nMuchas gracias :D')
+print('\nMuchas gracias por usar este programa.\n¡Tenga un bonito día! :D')
