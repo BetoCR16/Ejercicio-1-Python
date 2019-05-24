@@ -1,7 +1,7 @@
 #------------------------------ Funciones --------------------------------------------
 def introducirOpción():
-    input ('Escoja una opción:\n 1. Ingresar 2 números\n 2. Calcular sumatoria\n 3. Convertir de kg a libras\n 4. Calcular de libras a kilogramos\n 5. Dividir los números\n 6. Salir\n \n Su opción: ')
-
+    opción = input ('Escoja una opción:\n 1. Ingresar 2 números\n 2. Calcular sumatoria\n 3. Convertir de libras a kg\n 4. Convertir de kg a libras\n 5. Dividir los números\n 6. Salir\n \n Su opción: ')
+    return opción
 
 def calcularSumatoria(num1, num2):
     suma = 0
@@ -32,11 +32,23 @@ while (opción != '6'):
     if opción == '1':
         num1 = int(input('Introduzca el primer número: '))
         num2 = int(input('Introduzca el segundo número: '))
-        print('\n \nLISTO\n \n')
-        opción = input ('Escoja una opción:\n 1. Ingresar 2 números\n 2. Calcular sumatoria\n 3. Convertir de kg a libras\n 4. Calcular de libras a kilogramos\n 5. Dividir los números\n 6. Salir\n \n Su opción: ')
+        opción = introducirOpción()
+        print('\nLISTO\n')
+    
     elif opción == '2':
-        print('\n\nEl resultado de la sumatoria es: ' + str(calcularSumatoria(num1,num2)))
-        print('\n \nLISTO\n \n')
-        opción = input ('Escoja una opción:\n 1. Ingresar 2 números\n 2. Calcular sumatoria\n 3. Convertir de kg a libras\n 4. Calcular de libras a kilogramos\n 5. Dividir los números\n 6. Salir\n \n Su opción: ')
+        print('\nEl resultado de la sumatoria es: ' + str(calcularSumatoria(num1,num2)) + '\n')
+        opción = introducirOpción()
+    
+    elif opción == '3':
+        print('\n'+ str(num1) + ' libras equivalen a ' + str(convertirLb_Kg(num1)) + ' kilogramos.\n')
+        opción = introducirOpción()
+   
+    elif opción == '4':
+        print('\n'+ str(num1) + ' kilogramos equivalen a ' + str(convertirKg_Lb(num1)) + ' libras.\n')
+        opción = introducirOpción()
+    
+    elif opción == '5':
+        print('\nLa resultado de la división es: ' + str(dividirNumeros(num1, num2)))
+        opción = introducirOpción()
 
-print('Muchas gracias')
+print('\nMuchas gracias')
