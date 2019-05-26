@@ -11,9 +11,9 @@ def adivinar(palabra, intentadas):
                 return False
     return True
 
-def mostrar(palabra, intentadas, intentos, turno):
+def mostrar(palabra, intentadas, intentos, turno, letraIntento):
     print('Turno: ', turno)
-    print('Letras utilizadas: ', intentadas)
+    print('Letras incorrectas: ', aciertoFallo(palabra, intentadas))
     print('Fallos: ', intentos)
     print(ocultarPalabra(palabra, intentadas))
 
@@ -34,8 +34,17 @@ def leerIntento(intentadas):
         letra = input('Escriba una letra: ').lower()
     return letra
 
-def acierto(palabra, letraIntento):
-    return letraIntento in palabra
+def aciertoFallo(palabra, intentadas):
+    letraCorrecta = ''
+    letraIncorrecta = ''
+    if intentadas in palabra:
+        letraCorrecta += intentadas + ' ' 
+    else:
+        letraIncorrecta += intentadas + ' '
+        
+    return letraIncorrecta
+    
+    
 
 def jugarOtraVez():
     respuesta = input('Quiere volver a jugar? (s/n) :').lower()
@@ -58,16 +67,12 @@ while jugar:
     intentos = 0
     turno = 1
     while intentos < intentosMax and not adivinar(palabra, intentadas):
-        mostrar(palabra, intentadas, intentos, turno)
+        letraIntento = ''
+        mostrar(palabra, intentadas, intentos, turno, letraIntento)
         letraIntento = leerIntento(intentadas)
-        if acierto(palabra, letraIntento):
-            print('Has adivinado')
-        else:
-            print('Has fallado')
-            intentos += 1
+        aciertoFallo(palabra, letraIntento)
         intentadas += letraIntento
         turno += 1
      
     jugar = jugarOtraVez()
-
     
