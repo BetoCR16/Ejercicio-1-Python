@@ -44,9 +44,10 @@ def jugarOtraVez():
     elif respuesta == 'n':
         jugar = False
         print('Muchas gracias por jugar :D')
+    return jugar
     
 #---------------------------------- Principal ------------------------------
-print('Bienvenido al juego de ahorcado')
+print('Bienvenido al juego de ahorcado\n')
 intentosMax = 7
 
 jugar = True
@@ -66,3 +67,7 @@ while jugar:
             intentos += 1
         intentadas += letraIntento
         turno += 1
+     
+    jugar = jugarOtraVez()
+
+    
